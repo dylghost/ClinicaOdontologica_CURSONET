@@ -12,9 +12,10 @@ namespace ClinicaOdontologica.Modelos
     public class Paciente
     {
         [Key]
-        [Column("id_paciente")]
+        [Column("id_paciente",TypeName ="Serial")]
         public int idPaciente { get; set; }
         [MaxLength(10)]
+        [Required]
         public string dni { get; set; }
         [MaxLength(100)]
         [Required]
@@ -25,7 +26,7 @@ namespace ClinicaOdontologica.Modelos
         [Column("fecha_nacimiento")]
         [Required]
         public DateOnly fechaNacimiento {  get; set; }
-        [MaxLength(100)]
+        [MaxLength(50)]
         [Required]
         public string email {  get; set; }
         [MaxLength(10)]

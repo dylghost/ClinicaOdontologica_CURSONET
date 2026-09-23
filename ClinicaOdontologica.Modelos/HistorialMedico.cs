@@ -12,16 +12,20 @@ namespace ClinicaOdontologica.Modelos
     public class HistorialMedico
     {
         [Key]
-
+        [Column("id_historial", TypeName ="Serial")]
         [Required]
         public int idHistorialMedico { get; set; }
+        [MaxLength(50)]
         [Required]
         public string alergias { get; set; }
+        [Column("enfermedades_previas")]
+        [MaxLength(100)]
+        [Required]
         public string enfermedadesPrevias { get; set; }
+        [Column("tipo_sangre")]
         public string tipoSangre { get; set; }
-        [ForeignKey("")]
+        [ForeignKey("Paciente")]
         [Column("id_paciente")]
-       
         public int idPaciente { get; set; }
         public Paciente? paciente { get; set; }
     }

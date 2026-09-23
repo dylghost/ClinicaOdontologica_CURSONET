@@ -8,17 +8,18 @@ using System.Threading.Tasks;
 
 namespace ClinicaOdontologica.Modelos
 {
+    [Table("tratamientos")]
     public class Tratamiento
     {
         
         [Key]
-        [Column("id_tratamiento")]
+        [Column("id_tratamiento",TypeName ="Serial")]
         public int idTratamiento { get; set; }
         [Column("nombre_tratamiento")]
         [MaxLength(50)]
         [Required]
         public string nombreTratamiento { get; set; }
-        [Column(TypeName = "decimal(10,2")]
+        [Column("costo_base",TypeName = "decimal(10,2")]
         [Required]
         public decimal costoBase {  get; set; }
         [Column("duracion_estimada_minutos")]

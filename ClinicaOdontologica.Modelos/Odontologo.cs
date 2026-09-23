@@ -8,10 +8,13 @@ using System.Threading.Tasks;
 
 namespace ClinicaOdontologica.Modelos
 {
+    [Table("odontologos")]
     public class Odontologo
     {
         [Key]
-        public int id_odontologo {  get; set; }
+        [Column("id_odontologo")]
+        [Required]
+        public int idOdontologo {  get; set; }
         [MaxLength(100)]
         [Required]
         public string nombres {  get; set; }
@@ -22,8 +25,10 @@ namespace ClinicaOdontologica.Modelos
         [MaxLength(100)]
         [Required]
         public string registroMedico {  get; set; }
-        [ForeignKey("especialidades")]
-        public int IdPaciente { get; set; }
+        [ForeignKey("Especialidad")]
+        [Column("id_especialidad")]
+        public int idEspecialidad { get; set; }
+        public Especialidad? especialidad { get; set; }
 
     }
 }
