@@ -8,8 +8,35 @@ using System.Threading.Tasks;
 
 namespace ClinicaOdontologica.Modelos
 {
+    [Table("citas")]
     public  class Cita
     {
-        
+        [Key]
+        [Column("id_cita", TypeName = "Serial")]
+        [Required]
+        public int idCita { get; set; }
+        [Required]
+        public DateTime fechaCita { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string motivo { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string estadoCita { get; set; }
+        [ForeignKey("Paciente")]
+        [Required]
+        public int idPaciente { get; set; }
+        [ForeignKey("Odontologo")]
+        [Required]
+        public int idOdontologo { get; set; }
+        [ForeignKey("Consultorio")]
+        [Required]
+        public int idConsultorio { get; set; }
+
+        //Obj de navegacion
+
+        public Paciente? paciente { get; set; }
+        public Odontologo? odontologo { get; set; }
+        public Consultorio? consultorio { get; set; }
     }
 }
