@@ -25,5 +25,9 @@ namespace ClinicaOdontologica.Modelos
         [Column("duracion_estimada_minutos", TypeName = "timestamp")]
         [Required]
         public TimeOnly duracionEstimadaMinutos { get; set; }
+        //Relaciones
+        List<DetalleCita> DetallesCita { get; set; } = new List<DetalleCita>();
+        
+        
     }
 }

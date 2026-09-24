@@ -33,5 +33,7 @@ namespace ClinicaOdontologica.Modelos
         //Objetos de navegacion
         public Cita? cita { get; set; }
         public Tratamiento? tratamiento { get; set; }
+
+        
     }
 }

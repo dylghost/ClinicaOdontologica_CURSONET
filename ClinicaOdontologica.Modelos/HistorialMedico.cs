@@ -29,5 +29,7 @@ namespace ClinicaOdontologica.Modelos
         [Column("id_paciente")]
         public int idPaciente { get; set; }
         public Paciente? paciente { get; set; }
+
+        
     }
 }

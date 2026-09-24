@@ -32,5 +32,10 @@ namespace ClinicaOdontologica.Modelos
         [MaxLength(10)]
         [Required]
         public string telefono {  get; set; }
+
+        //Relaciones;
+
+        List<Cita> citas { get; set; } = new List<Cita>();
+        
     }
 }

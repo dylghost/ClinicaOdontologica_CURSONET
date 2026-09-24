@@ -33,5 +33,9 @@ namespace ClinicaOdontologica.Modelos
         [Column("id_cita")]
         public int idCita { get; set; } 
         public Cita? cita { get; set; }
+
+        //Relaciones
+
+        List<Cita> citas { get; set; } = new List<Cita>();
     }
 }
