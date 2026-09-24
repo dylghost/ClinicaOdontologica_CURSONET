@@ -16,24 +16,22 @@ namespace ClinicaOdontologica.Modelos
         [Required]
 
         public int idFactura { get; set; }
-        [Column("fecha_emision",TypeName ="Time Zone")]
+        [Column("fecha_emision",TypeName ="date")]
         [Required]
         public DateTime fechaEmision { get; set; }
-        [Column("subtotal", TypeName = "Decimal(10,2)")]
+        [Column("subtotal")]
         [Required]
         public decimal subTotal { get; set; }
         
-        [Column(TypeName = "Decimal(10,2)")]
         [Required]
         public decimal impuestos { get; set; }
-        [Column(TypeName = "Decimal(10,2)")]
         [Required]
         public decimal total { get; set; }
         [Column("estado_pago")]
         public string estadoPago { get; set; }
-        [ForeignKey("Cita")]
+        [ForeignKey("cita")]
         [Column("id_cita")]
         public int idCita { get; set; } 
-        public Cita cita { get; set; }
+        public Cita? cita { get; set; }
     }
 }

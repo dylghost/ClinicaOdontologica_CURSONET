@@ -15,11 +15,11 @@ namespace ClinicaOdontologica.Modelos
         [Column("id_detalle_cita", TypeName = "Serial")]
         [Required]
         public int idDetalleCita { get; set; }
-        [ForeignKey("Cita")]
+        [ForeignKey("cita")]
         [Column("id_cita")]
         [Required]
         public int idCita { get; set; }
-        [ForeignKey("Tratamiento")]
+        [ForeignKey("tratamiento")]
         [Column("id_tratamiento")]
         [Required]
         public int idTratamiento { get; set; }
@@ -32,6 +32,6 @@ namespace ClinicaOdontologica.Modelos
 
         //Objetos de navegacion
         public Cita? cita { get; set; }
-        public Tratamiento tratamiento { get; set; }
+        public Tratamiento? tratamiento { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace ClinicaOdontologica.Modelos
         public DateTime fechaEmision { get; set; }
         [Required]
         public string indicaciones { get; set; }
-        [ForeignKey("Cita")]
+        [ForeignKey("cita")]
         [Column("id_cita")]
         [Required]
         public int idCita { get; set; }

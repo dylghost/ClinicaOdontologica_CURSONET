@@ -23,7 +23,7 @@ namespace ClinicaOdontologica.Modelos
         [MaxLength(100)]
         [Required]
         public string apellidos { get; set; }
-        [Column("fecha_nacimiento")]
+        [Column("fecha_nacimiento", TypeName = "date")]
         [Required]
         public DateOnly fechaNacimiento {  get; set; }
         [MaxLength(50)]

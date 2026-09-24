@@ -19,10 +19,10 @@ namespace ClinicaOdontologica.Modelos
         [MaxLength(50)]
         [Required]
         public string nombreTratamiento { get; set; }
-        [Column("costo_base",TypeName = "decimal(10,2")]
+        [Column("costo_base")]
         [Required]
         public decimal costoBase {  get; set; }
-        [Column("duracion_estimada_minutos")]
+        [Column("duracion_estimada_minutos", TypeName = "timestamp")]
         [Required]
         public TimeOnly duracionEstimadaMinutos { get; set; }
     }
