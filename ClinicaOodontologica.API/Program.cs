@@ -7,7 +7,7 @@ namespace ClinicaOodontologica.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("ClinicaOodontologicaAPIContext") ?? throw new InvalidOperationException("Connection string 'ClinicaOodontologicaAPIContext' not found.");
+            var connectionString = builder.Configuration.GetConnectionString("Postgres") ?? throw new InvalidOperationException("Connection string 'Postgres' not found.");
 
             builder.Services.AddDbContext<ClinicaOodontologicaAPIContext>(options => options.UseNpgsql(connectionString));
 
@@ -21,12 +21,12 @@ namespace ClinicaOodontologica.API
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
+            //if (app.Environment.IsDevelopment())
+            //{
                 app.UseSwagger();
                 app.UseSwaggerUI();
-            }
-
+            //}
+            
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

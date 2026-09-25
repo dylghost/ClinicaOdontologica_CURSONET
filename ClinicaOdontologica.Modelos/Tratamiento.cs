@@ -13,7 +13,7 @@ namespace ClinicaOdontologica.Modelos
     {
         
         [Key]
-        [Column("id_tratamiento",TypeName ="Serial")]
+        [Column("id_tratamiento")]
         public int idTratamiento { get; set; }
         [Column("nombre_tratamiento")]
         [MaxLength(50)]
@@ -22,7 +22,7 @@ namespace ClinicaOdontologica.Modelos
         [Column("costo_base")]
         [Required]
         public decimal costoBase {  get; set; }
-        [Column("duracion_estimada_minutos", TypeName = "timestamp")]
+        [Column("duracion_estimada_minutos")]
         [Required]
         public TimeOnly duracionEstimadaMinutos { get; set; }
         //Relaciones

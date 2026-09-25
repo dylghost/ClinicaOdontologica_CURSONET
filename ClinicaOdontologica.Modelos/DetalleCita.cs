@@ -12,7 +12,7 @@ namespace ClinicaOdontologica.Modelos
     public class DetalleCita
     {
         [Key]
-        [Column("id_detalle_cita", TypeName = "Serial")]
+        [Column("id_detalle_cita")]
         [Required]
         public int idDetalleCita { get; set; }
         [ForeignKey("cita")]
