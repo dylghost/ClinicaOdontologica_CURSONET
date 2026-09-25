@@ -26,8 +26,4 @@
     <ProjectReference Include="..\ClinicaOdontologica.Modelos\ClinicaOdontologica.Modelos.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Temo\" />
-  </ItemGroup>
-
 </Project>
